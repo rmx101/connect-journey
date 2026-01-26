@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 24tons Journey to Checklist</title>
+    <meta http-equiv="refresh" content="0; url=checklist-journey.html">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #0a0e1a;
+            color: #e8edf4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .loading {
+            font-size: 1.5rem;
+        }
+        .loading::after {
+            content: '...';
+            animation: dots 1.5s steps(4, end) infinite;
+        }
+        @keyframes dots {
+            0%, 20% { content: ''; }
+            40% { content: '.'; }
+            60% { content: '..'; }
+            80%, 100% { content: '...'; }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">Redirecting to Journey</div>
+    <script>
+        // Backup JavaScript redirect in case meta refresh doesn't work
+        setTimeout(() => {
+            window.location.href = 'checklist-journey.html';
+        }, 100);
+    </script>
+</body>
+</html>
