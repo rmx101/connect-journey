@@ -496,6 +496,16 @@
             margin: 1rem 0;
         }
 
+        .stats-as-of {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem 2rem;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--color-text-dim);
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .version-switcher {
@@ -900,9 +910,27 @@
         </section>
     </div>
 
+    <footer class="stats-as-of">Data as of <span data-stat="generatedAt">January 2026</span></footer>
+
     <script>
         let currentSection = 0;
         const totalSections = 4;
+
+        async function loadStats() {
+            try {
+                const response = await fetch('data/stats.json', { cache: 'no-cache' });
+                if (!response.ok) throw new Error(`Stats request failed: ${response.status}`);
+                const stats = await response.json();
+                document.querySelector('[data-stat="generatedAt"]').textContent = new Intl.DateTimeFormat('en-US', {
+                    month: 'short',
+                    day: 'numeric',
+                    year: 'numeric',
+                    timeZone: 'UTC'
+                }).format(new Date(stats.generatedAt));
+            } catch (error) {
+                console.warn('Live stats unavailable; using inline fallback content.', error);
+            }
+        }
 
         function showSection(sectionNum) {
             const section = document.getElementById(`section${sectionNum}`);
@@ -937,6 +965,8 @@
                 document.getElementById('progressBar').style.width = Math.min(progress, 100) + '%';
             }
         });
+
+        loadStats();
     </script>
 </body>
 </html>

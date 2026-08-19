@@ -323,6 +323,22 @@
             max-height: 200px;
         }
 
+        #changesChart {
+            width: 100%;
+            height: 260px;
+            max-height: 260px;
+        }
+
+        .stats-as-of {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem 2rem;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--color-text-dim);
+        }
+
         /* Comparison */
         .comparison {
             display: grid;
@@ -801,15 +817,15 @@
 
                 <div class="hero-stats" style="margin-bottom: 3rem;">
                     <div class="stat">
-                        <span class="stat-number">2,021</span>
+                        <span class="stat-number" data-stat="commits">2,021</span>
                         <span class="stat-label">Commits</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-number">317+</span>
+                        <span class="stat-number" data-stat="mergedPrs">317+</span>
                         <span class="stat-label">Pull Requests</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-number">3</span>
+                        <span class="stat-number" data-stat="monthsActive">3</span>
                         <span class="stat-label">Months</span>
                     </div>
                     <div class="stat">
@@ -821,6 +837,11 @@
                 <div class="chart-container">
                     <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; text-align: center;">Git Commits: From Legacy Tools to Modern Development</h3>
                     <canvas id="commitChart"></canvas>
+                </div>
+
+                <div class="chart-container">
+                    <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; text-align: center;">Lines Added vs. Removed</h3>
+                    <canvas id="changesChart"></canvas>
                 </div>
 
                 <div class="comparison">
@@ -835,9 +856,9 @@
                         <div class="comparison-context">commits over 8 years</div>
                     </div>
                     <div class="comparison-item">
-                        <div class="comparison-label">Checklist (Oct-Jan)</div>
-                        <div class="comparison-value">2,021</div>
-                        <div class="comparison-context">commits in 3 months</div>
+                        <div class="comparison-label" data-stat="dateRange">Checklist (Oct-Jan)</div>
+                        <div class="comparison-value" data-stat="commits">2,021</div>
+                        <div class="comparison-context">commits in <span data-stat="monthsActive">3</span> months</div>
                     </div>
                 </div>
 
@@ -868,7 +889,7 @@
                             <p class="timeline-text">"Initial commit from Create Next App" - Within hours: authentication, role-based access, Zoho Books integration. Project renamed from "Checklist6" to "Checklist".</p>
                             <div class="timeline-metrics">
                                 <div class="timeline-metric">
-                                    <span class="timeline-metric-value">566</span> commits in October
+                                    <span class="timeline-metric-value" data-month="2025-10">566</span> commits in October
                                 </div>
                             </div>
                         </div>
@@ -882,7 +903,7 @@
                             <p class="timeline-text">Purchase Orders, Container tracking, Booking Forms, Bill of Lading Instructions. All integrated with Zoho Books, mobile-responsive, with PDF generation.</p>
                             <div class="timeline-metrics">
                                 <div class="timeline-metric">
-                                    <span class="timeline-metric-value">944</span> commits (peak month!)
+                                    <span class="timeline-metric-value" data-month="2025-11">944</span> commits (peak month!)
                                 </div>
                             </div>
                         </div>
@@ -896,7 +917,7 @@
                             <p class="timeline-text">The crown jewel: 4-step Order Form wizard. Plus Price Book, Auto Checklist, Invoice enhancements, payment tracking.</p>
                             <div class="timeline-metrics">
                                 <div class="timeline-metric">
-                                    <span class="timeline-metric-value">425</span> commits
+                                    <span class="timeline-metric-value" data-month="2025-12">425</span> commits
                                 </div>
                             </div>
                         </div>
@@ -910,7 +931,7 @@
                             <p class="timeline-text">Error handling, performance improvements with caching, Entity Checklist system, retry logic. Production-ready refinements.</p>
                             <div class="timeline-metrics">
                                 <div class="timeline-metric">
-                                    <span class="timeline-metric-value">86+</span> commits and counting
+                                    <span class="timeline-metric-value" data-month-start="2026-01">86+</span> commits and counting
                                 </div>
                             </div>
                         </div>
@@ -1028,7 +1049,7 @@
                             <div class="qa-q-icon">❓</div>
                             <h3>The Velocity Pattern</h3>
                         </div>
-                        <p class="qa-text">If the velocity was <strong>944 commits in November</strong> (peak month), what does the decline to <strong>86 in January</strong> tell you?</p>
+                        <p class="qa-text">If the velocity was <strong><span data-month="2025-11">944</span> commits in November</strong> (peak month), what does the decline to <strong><span data-month="2026-01">86</span> in January</strong> tell you?</p>
                         <div class="qa-options">
                             <div class="qa-option">Is it a problem?</div>
                             <div class="qa-option">Or a sign of maturation?</div>
@@ -1125,11 +1146,81 @@
         </section>
     </div>
 
+    <footer class="stats-as-of">Data as of <span data-stat="generatedAt">January 2026</span></footer>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
     <script>
         let currentSection = 0;
         const totalSections = 7;
+        let liveStats = null;
+        let chartsInitialized = false;
+        let commitChartInstance = null;
+        let changesChartInstance = null;
+
+        const fallbackByMonth = [
+            { month: '2025-10', commits: 566 },
+            { month: '2025-11', commits: 944 },
+            { month: '2025-12', commits: 425 },
+            { month: '2026-01', commits: 86 }
+        ];
+
+        const formatNumber = (value) => new Intl.NumberFormat('en-US').format(value);
+        const formatMonth = (month) => new Intl.DateTimeFormat('en-US', {
+            month: 'short',
+            year: 'numeric',
+            timeZone: 'UTC'
+        }).format(new Date(`${month}-01T00:00:00Z`));
+        const monthKey = (value) => value.slice(0, 7);
+
+        function formatDate(value) {
+            return new Intl.DateTimeFormat('en-US', {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric',
+                timeZone: 'UTC'
+            }).format(new Date(value));
+        }
+
+        function monthTotal(start, end) {
+            return liveStats.byMonth
+                .filter((entry) => entry.month >= start && (!end || entry.month <= end))
+                .reduce((total, entry) => total + entry.commits, 0);
+        }
+
+        function updateLiveStats(stats) {
+            const { totals } = stats;
+            document.querySelectorAll('[data-stat="commits"]').forEach((element) => {
+                element.textContent = formatNumber(totals.commits);
+            });
+            document.querySelectorAll('[data-stat="mergedPrs"]').forEach((element) => {
+                element.textContent = formatNumber(totals.mergedPrs);
+            });
+            document.querySelectorAll('[data-stat="monthsActive"]').forEach((element) => {
+                element.textContent = formatNumber(totals.monthsActive);
+            });
+            document.querySelector('[data-stat="dateRange"]').textContent =
+                `Checklist (${formatMonth(monthKey(totals.firstCommit))}–${formatMonth(monthKey(totals.lastCommit))})`;
+            document.querySelector('[data-stat="generatedAt"]').textContent = formatDate(stats.generatedAt);
+            document.querySelectorAll('[data-month]').forEach((element) => {
+                element.textContent = formatNumber(monthTotal(element.dataset.month, element.dataset.month));
+            });
+            document.querySelectorAll('[data-month-start]').forEach((element) => {
+                element.textContent = `${formatNumber(monthTotal(element.dataset.monthStart))}+`;
+            });
+        }
+
+        async function loadStats() {
+            try {
+                const response = await fetch('data/stats.json', { cache: 'no-cache' });
+                if (!response.ok) throw new Error(`Stats request failed: ${response.status}`);
+                liveStats = await response.json();
+                updateLiveStats(liveStats);
+                if (chartsInitialized) initCharts();
+            } catch (error) {
+                console.warn('Live stats unavailable; using inline fallback content.', error);
+            }
+        }
 
         function showSection(sectionNum) {
             const section = document.getElementById(`section${sectionNum}`);
@@ -1148,10 +1239,9 @@
                     });
                 }, 150);
 
-                // Initialize chart when section 1 is shown
-                if (sectionNum === 1 && !window.chartInitialized) {
-                    initChart();
-                    window.chartInitialized = true;
+                if (sectionNum === 1 && !chartsInitialized) {
+                    initCharts();
+                    chartsInitialized = true;
                 }
             }
         }
@@ -1161,21 +1251,20 @@
             document.getElementById('progressBar').style.width = progress + '%';
         }
 
-        function initChart() {
+        function initCharts() {
+            if (commitChartInstance) commitChartInstance.destroy();
+            if (changesChartInstance) changesChartInstance.destroy();
+
+            const byMonth = liveStats ? liveStats.byMonth : fallbackByMonth;
             const ctx = document.getElementById('commitChart').getContext('2d');
-            new Chart(ctx, {
+            commitChartInstance = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['Oct 2025', 'Nov 2025', 'Dec 2025', 'Jan 2026'],
+                    labels: byMonth.map((entry) => formatMonth(entry.month)),
                     datasets: [{
                         label: 'Checklist Commits',
-                        data: [566, 944, 425, 86],
-                        backgroundColor: [
-                            'rgba(0, 217, 255, 0.8)',
-                            'rgba(0, 217, 255, 0.9)',
-                            'rgba(0, 217, 255, 0.7)',
-                            'rgba(0, 217, 255, 0.6)'
-                        ],
+                        data: byMonth.map((entry) => entry.commits),
+                        backgroundColor: 'rgba(0, 217, 255, 0.8)',
                         borderColor: 'rgba(0, 217, 255, 1)',
                         borderWidth: 2,
                         borderRadius: 8
@@ -1251,6 +1340,79 @@
                     }
                 }
             });
+
+            if (!liveStats) return;
+            const changesContext = document.getElementById('changesChart').getContext('2d');
+            changesChartInstance = new Chart(changesContext, {
+                type: 'line',
+                data: {
+                    labels: liveStats.byMonth.map((entry) => formatMonth(entry.month)),
+                    datasets: [
+                        {
+                            label: 'Lines added',
+                            data: liveStats.byMonth.map((entry) => entry.additions),
+                            borderColor: '#4ade80',
+                            backgroundColor: 'rgba(74, 222, 128, 0.15)',
+                            pointBackgroundColor: '#4ade80',
+                            tension: 0.25,
+                            fill: false
+                        },
+                        {
+                            label: 'Lines removed',
+                            data: liveStats.byMonth.map((entry) => entry.deletions),
+                            borderColor: '#ff6b6b',
+                            backgroundColor: 'rgba(255, 107, 107, 0.15)',
+                            pointBackgroundColor: '#ff6b6b',
+                            tension: 0.25,
+                            fill: false
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    layout: {
+                        padding: { top: 20, bottom: 10 }
+                    },
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: '#e8edf4',
+                                font: { family: 'JetBrains Mono' }
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(20, 25, 37, 0.95)',
+                            titleColor: '#00d9ff',
+                            bodyColor: '#e8edf4',
+                            borderColor: '#1e2433',
+                            borderWidth: 1,
+                            padding: 12,
+                            callbacks: {
+                                label: (context) => `${context.dataset.label}: ${formatNumber(context.parsed.y)}`
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: 'rgba(139, 146, 167, 0.1)' },
+                            ticks: {
+                                color: '#8b92a7',
+                                font: { family: 'JetBrains Mono', size: 12 },
+                                callback: (value) => formatNumber(value)
+                            }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: {
+                                color: '#8b92a7',
+                                font: { family: 'JetBrains Mono', size: 12 }
+                            }
+                        }
+                    }
+                }
+            });
         }
 
         // Track scroll for progress bar (alternative method)
@@ -1265,6 +1427,8 @@
                 document.getElementById('progressBar').style.width = Math.min(progress, 100) + '%';
             }
         });
+
+        loadStats();
     </script>
 </body>
 </html>
