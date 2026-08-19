@@ -839,7 +839,7 @@
                     <canvas id="commitChart"></canvas>
                 </div>
 
-                <div class="chart-container">
+                <div class="chart-container" id="changesChartContainer" hidden>
                     <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; text-align: center;">Lines Added vs. Removed</h3>
                     <canvas id="changesChart"></canvas>
                 </div>
@@ -1342,6 +1342,7 @@
             });
 
             if (!liveStats) return;
+            document.getElementById('changesChartContainer').hidden = false;
             const changesContext = document.getElementById('changesChart').getContext('2d');
             changesChartInstance = new Chart(changesContext, {
                 type: 'line',
