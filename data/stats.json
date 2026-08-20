@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-20T01:41:57.798Z",
+  "generatedAt": "2026-08-20T02:03:09.154Z",
   "repo": "rmx101/Connect",
   "totals": {
-    "commits": 7948,
-    "mergedPrs": 1943,
-    "additions": 503159,
-    "deletions": 211368,
+    "commits": 7950,
+    "mergedPrs": 1944,
+    "additions": 503167,
+    "deletions": 211380,
     "monthsActive": 11,
     "firstCommit": "2025-10-15T16:47:38Z",
-    "lastCommit": "2026-08-20T01:14:33Z"
+    "lastCommit": "2026-08-20T01:59:00Z"
   },
   "byMonth": [
     {
@@ -83,13 +83,21 @@
     },
     {
       "month": "2026-08",
-      "commits": 452,
-      "mergedPrs": 137,
-      "additions": 24908,
-      "deletions": 24929
+      "commits": 454,
+      "mergedPrs": 138,
+      "additions": 24916,
+      "deletions": 24941
     }
   ],
   "recentMergedPrs": [
+    {
+      "number": 2034,
+      "title": "Workspace: top toolbar spans only the cards column; Actions rail starts at the top",
+      "mergedAt": "2026-08-20T01:59:01Z",
+      "additions": 8,
+      "deletions": 12,
+      "changedFiles": 1
+    },
     {
       "number": 2033,
       "title": "Inbound: normal invoice step scoped to the warehouse view, multi-warehouse, Trucking by write-back",
@@ -281,14 +289,6 @@
       "additions": 61,
       "deletions": 21,
       "changedFiles": 4
-    },
-    {
-      "number": 2010,
-      "title": "Log a po_form event on PO form save so the actions rail shows it as done",
-      "mergedAt": "2026-08-18T20:01:08Z",
-      "additions": 44,
-      "deletions": 0,
-      "changedFiles": 2
     }
   ]
 }
