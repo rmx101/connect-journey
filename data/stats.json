@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-19T23:51:39.984Z",
+  "generatedAt": "2026-08-20T01:41:57.798Z",
   "repo": "rmx101/Connect",
   "totals": {
-    "commits": 7943,
-    "mergedPrs": 1942,
-    "additions": 502939,
-    "deletions": 211153,
+    "commits": 7948,
+    "mergedPrs": 1943,
+    "additions": 503159,
+    "deletions": 211368,
     "monthsActive": 11,
     "firstCommit": "2025-10-15T16:47:38Z",
-    "lastCommit": "2026-08-19T22:22:38Z"
+    "lastCommit": "2026-08-20T01:14:33Z"
   },
   "byMonth": [
     {
@@ -83,13 +83,21 @@
     },
     {
       "month": "2026-08",
-      "commits": 447,
-      "mergedPrs": 136,
-      "additions": 24688,
-      "deletions": 24714
+      "commits": 452,
+      "mergedPrs": 137,
+      "additions": 24908,
+      "deletions": 24929
     }
   ],
   "recentMergedPrs": [
+    {
+      "number": 2033,
+      "title": "Inbound: normal invoice step scoped to the warehouse view, multi-warehouse, Trucking by write-back",
+      "mergedAt": "2026-08-20T01:14:34Z",
+      "additions": 220,
+      "deletions": 215,
+      "changedFiles": 14
+    },
     {
       "number": 2031,
       "title": "Read Trucking by from the vendor contact custom field id too",
@@ -281,14 +289,6 @@
       "additions": 44,
       "deletions": 0,
       "changedFiles": 2
-    },
-    {
-      "number": 2008,
-      "title": "Ticket search: drop ticket-number-only hits, default to last 3 months",
-      "mergedAt": "2026-08-18T18:52:36Z",
-      "additions": 169,
-      "deletions": 89,
-      "changedFiles": 9
     }
   ]
 }

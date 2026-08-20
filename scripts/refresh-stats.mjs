@@ -1,19 +1,38 @@
 #!/usr/bin/env node
 // Regenerates data/stats.json from the rmx101/Connect repository.
-// Requires a token with read access to the (private) Connect repo:
+// Uses an explicit token when provided, otherwise the local gh CLI token:
 //   CONNECT_READ_TOKEN=... node scripts/refresh-stats.mjs
+// Authenticate with `gh auth login` if no token is available.
 
+import { execFileSync } from 'node:child_process';
 import { writeFile, mkdir } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const OWNER = 'rmx101';
 const NAME = 'Connect';
-const TOKEN = process.env.CONNECT_READ_TOKEN || process.env.GITHUB_TOKEN;
 const OUT = join(dirname(fileURLToPath(import.meta.url)), '..', 'data', 'stats.json');
 
+function localGhToken() {
+  try {
+    return execFileSync('gh', ['auth', 'token'], {
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    }).trim();
+  } catch {
+    return '';
+  }
+}
+
+const TOKEN =
+  process.env.CONNECT_READ_TOKEN ||
+  process.env.GITHUB_TOKEN ||
+  localGhToken();
+
 if (!TOKEN) {
-  console.error('CONNECT_READ_TOKEN (or GITHUB_TOKEN) is required');
+  console.error(
+    'A GitHub token is required. Set CONNECT_READ_TOKEN or GITHUB_TOKEN, or authenticate with `gh auth login`.'
+  );
   process.exit(1);
 }
 
