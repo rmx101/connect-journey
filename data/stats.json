@@ -1,0 +1,294 @@
+{
+  "generatedAt": "2026-08-19T23:51:39.984Z",
+  "repo": "rmx101/Connect",
+  "totals": {
+    "commits": 7943,
+    "mergedPrs": 1942,
+    "additions": 502939,
+    "deletions": 211153,
+    "monthsActive": 11,
+    "firstCommit": "2025-10-15T16:47:38Z",
+    "lastCommit": "2026-08-19T22:22:38Z"
+  },
+  "byMonth": [
+    {
+      "month": "2025-10",
+      "commits": 393,
+      "mergedPrs": 52,
+      "additions": 31609,
+      "deletions": 8630
+    },
+    {
+      "month": "2025-11",
+      "commits": 864,
+      "mergedPrs": 84,
+      "additions": 47933,
+      "deletions": 11629
+    },
+    {
+      "month": "2025-12",
+      "commits": 408,
+      "mergedPrs": 111,
+      "additions": 18924,
+      "deletions": 6949
+    },
+    {
+      "month": "2026-01",
+      "commits": 774,
+      "mergedPrs": 202,
+      "additions": 32812,
+      "deletions": 22087
+    },
+    {
+      "month": "2026-02",
+      "commits": 895,
+      "mergedPrs": 240,
+      "additions": 134764,
+      "deletions": 33598
+    },
+    {
+      "month": "2026-03",
+      "commits": 1304,
+      "mergedPrs": 275,
+      "additions": 75761,
+      "deletions": 26812
+    },
+    {
+      "month": "2026-04",
+      "commits": 886,
+      "mergedPrs": 219,
+      "additions": 42982,
+      "deletions": 18127
+    },
+    {
+      "month": "2026-05",
+      "commits": 665,
+      "mergedPrs": 225,
+      "additions": 30158,
+      "deletions": 22317
+    },
+    {
+      "month": "2026-06",
+      "commits": 607,
+      "mergedPrs": 203,
+      "additions": 25014,
+      "deletions": 15566
+    },
+    {
+      "month": "2026-07",
+      "commits": 700,
+      "mergedPrs": 195,
+      "additions": 38294,
+      "deletions": 20724
+    },
+    {
+      "month": "2026-08",
+      "commits": 447,
+      "mergedPrs": 136,
+      "additions": 24688,
+      "deletions": 24714
+    }
+  ],
+  "recentMergedPrs": [
+    {
+      "number": 2031,
+      "title": "Read Trucking by from the vendor contact custom field id too",
+      "mergedAt": "2026-08-19T22:22:38Z",
+      "additions": 101,
+      "deletions": 49,
+      "changedFiles": 6
+    },
+    {
+      "number": 2032,
+      "title": "HS-code gate: accept \"HS: No Code\" / \"HS xx.xx\" placeholders as sendable",
+      "mergedAt": "2026-08-19T22:15:14Z",
+      "additions": 31,
+      "deletions": 6,
+      "changedFiles": 2
+    },
+    {
+      "number": 2030,
+      "title": "Workspace toolbar: Refresh/Close sit left over the cards, not over the Actions rail",
+      "mergedAt": "2026-08-19T21:38:47Z",
+      "additions": 6,
+      "deletions": 3,
+      "changedFiles": 2
+    },
+    {
+      "number": 2028,
+      "title": "Rates sheet: Un-Assign PO button for Booking / Freight POs",
+      "mergedAt": "2026-08-19T21:38:30Z",
+      "additions": 569,
+      "deletions": 228,
+      "changedFiles": 7
+    },
+    {
+      "number": 2029,
+      "title": "Send BL: refresh the items table after applying BL names",
+      "mergedAt": "2026-08-19T21:38:13Z",
+      "additions": 14,
+      "deletions": 2,
+      "changedFiles": 2
+    },
+    {
+      "number": 2027,
+      "title": "Date events: source PO only, and port ERD/Cut propagates off the Booking PO",
+      "mergedAt": "2026-08-19T20:05:06Z",
+      "additions": 88,
+      "deletions": 10,
+      "changedFiles": 6
+    },
+    {
+      "number": 2026,
+      "title": "Quote rate submissions comment on the submitting vendor's ticket",
+      "mergedAt": "2026-08-19T18:19:56Z",
+      "additions": 112,
+      "deletions": 51,
+      "changedFiles": 3
+    },
+    {
+      "number": 2025,
+      "title": "Items sheets: pricebook rate column with mismatch alert and quick edit",
+      "mergedAt": "2026-08-19T16:57:49Z",
+      "additions": 436,
+      "deletions": 50,
+      "changedFiles": 5
+    },
+    {
+      "number": 2024,
+      "title": "Order form: void the unused invoice on Inbound orders",
+      "mergedAt": "2026-08-19T16:56:46Z",
+      "additions": 131,
+      "deletions": 0,
+      "changedFiles": 7
+    },
+    {
+      "number": 2022,
+      "title": "Items editor cleanup: actions above the table, primary Save to PO",
+      "mergedAt": "2026-08-19T16:24:00Z",
+      "additions": 50,
+      "deletions": 71,
+      "changedFiles": 2
+    },
+    {
+      "number": 2023,
+      "title": "Drop banner-shaped sender decoration from ticket image PDFs",
+      "mergedAt": "2026-08-19T16:23:36Z",
+      "additions": 22,
+      "deletions": 0,
+      "changedFiles": 1
+    },
+    {
+      "number": 2020,
+      "title": "Order form: derive Trucking By from the vendor/customer contact field",
+      "mergedAt": "2026-08-19T16:20:37Z",
+      "additions": 99,
+      "deletions": 15,
+      "changedFiles": 5
+    },
+    {
+      "number": 2019,
+      "title": "Order form: suggested qty overrides per order type",
+      "mergedAt": "2026-08-19T16:18:19Z",
+      "additions": 91,
+      "deletions": 6,
+      "changedFiles": 3
+    },
+    {
+      "number": 2018,
+      "title": "Order form Step 1: auto-load the vendor's only pricebook item",
+      "mergedAt": "2026-08-19T16:14:26Z",
+      "additions": 33,
+      "deletions": 12,
+      "changedFiles": 1
+    },
+    {
+      "number": 2021,
+      "title": "Workspace cards: More info selects the card it was clicked from",
+      "mergedAt": "2026-08-19T16:14:12Z",
+      "additions": 8,
+      "deletions": 0,
+      "changedFiles": 2
+    },
+    {
+      "number": 2017,
+      "title": "Workspace editors: name the record being edited above its table",
+      "mergedAt": "2026-08-19T15:35:31Z",
+      "additions": 60,
+      "deletions": 0,
+      "changedFiles": 3
+    },
+    {
+      "number": 2016,
+      "title": "Warehouse inbound PO mirrors supplier PO, Materials & Supplies lines only",
+      "mergedAt": "2026-08-19T15:04:56Z",
+      "additions": 116,
+      "deletions": 36,
+      "changedFiles": 5
+    },
+    {
+      "number": 2015,
+      "title": "Omit country line from freight item To address",
+      "mergedAt": "2026-08-19T14:21:45Z",
+      "additions": 3,
+      "deletions": 2,
+      "changedFiles": 2
+    },
+    {
+      "number": 2014,
+      "title": "Wrap long order status text instead of cutting it off",
+      "mergedAt": "2026-08-19T01:29:32Z",
+      "additions": 42,
+      "deletions": 55,
+      "changedFiles": 12
+    },
+    {
+      "number": 2013,
+      "title": "Persist order-form POD edits to the customer contact in Books",
+      "mergedAt": "2026-08-18T22:52:28Z",
+      "additions": 199,
+      "deletions": 29,
+      "changedFiles": 10
+    },
+    {
+      "number": 2012,
+      "title": "Tickets: cancel pending feed retries, surface load failures, throttle refresh",
+      "mergedAt": "2026-08-18T22:34:50Z",
+      "additions": 134,
+      "deletions": 18,
+      "changedFiles": 2
+    },
+    {
+      "number": 2011,
+      "title": "Tickets: stop empty ticket feeds from sticking as \"No threads yet\"",
+      "mergedAt": "2026-08-18T22:05:09Z",
+      "additions": 81,
+      "deletions": 15,
+      "changedFiles": 2
+    },
+    {
+      "number": 2009,
+      "title": "Freight PO: address the To block to the selected warehouse; new Inbound invoice customer",
+      "mergedAt": "2026-08-18T20:13:36Z",
+      "additions": 61,
+      "deletions": 21,
+      "changedFiles": 4
+    },
+    {
+      "number": 2010,
+      "title": "Log a po_form event on PO form save so the actions rail shows it as done",
+      "mergedAt": "2026-08-18T20:01:08Z",
+      "additions": 44,
+      "deletions": 0,
+      "changedFiles": 2
+    },
+    {
+      "number": 2008,
+      "title": "Ticket search: drop ticket-number-only hits, default to last 3 months",
+      "mergedAt": "2026-08-18T18:52:36Z",
+      "additions": 169,
+      "deletions": 89,
+      "changedFiles": 9
+    }
+  ]
+}
