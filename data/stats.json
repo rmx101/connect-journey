@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-20T02:03:09.154Z",
+  "generatedAt": "2026-09-01T13:43:35.309Z",
   "repo": "rmx101/Connect",
   "totals": {
-    "commits": 7950,
-    "mergedPrs": 1944,
-    "additions": 503167,
-    "deletions": 211380,
+    "commits": 8181,
+    "mergedPrs": 2024,
+    "additions": 518529,
+    "deletions": 217612,
     "monthsActive": 11,
     "firstCommit": "2025-10-15T16:47:38Z",
-    "lastCommit": "2026-08-20T01:59:00Z"
+    "lastCommit": "2026-08-31T19:33:23Z"
   },
   "byMonth": [
     {
@@ -83,212 +83,212 @@
     },
     {
       "month": "2026-08",
-      "commits": 454,
-      "mergedPrs": 138,
-      "additions": 24916,
-      "deletions": 24941
+      "commits": 685,
+      "mergedPrs": 218,
+      "additions": 40278,
+      "deletions": 31173
     }
   ],
   "recentMergedPrs": [
     {
-      "number": 2034,
-      "title": "Workspace: top toolbar spans only the cards column; Actions rail starts at the top",
-      "mergedAt": "2026-08-20T01:59:01Z",
-      "additions": 8,
+      "number": 2114,
+      "title": "Move Send BL into the Send Invoice picker for Export/Import invoices",
+      "mergedAt": "2026-08-31T19:33:23Z",
+      "additions": 69,
       "deletions": 12,
-      "changedFiles": 1
-    },
-    {
-      "number": 2033,
-      "title": "Inbound: normal invoice step scoped to the warehouse view, multi-warehouse, Trucking by write-back",
-      "mergedAt": "2026-08-20T01:14:34Z",
-      "additions": 220,
-      "deletions": 215,
-      "changedFiles": 14
-    },
-    {
-      "number": 2031,
-      "title": "Read Trucking by from the vendor contact custom field id too",
-      "mergedAt": "2026-08-19T22:22:38Z",
-      "additions": 101,
-      "deletions": 49,
       "changedFiles": 6
     },
     {
-      "number": 2032,
-      "title": "HS-code gate: accept \"HS: No Code\" / \"HS xx.xx\" placeholders as sendable",
-      "mergedAt": "2026-08-19T22:15:14Z",
-      "additions": 31,
-      "deletions": 6,
-      "changedFiles": 2
+      "number": 2113,
+      "title": "Make a held workspace card's HOLD read louder next to a secondary Actions button",
+      "mergedAt": "2026-08-31T19:01:44Z",
+      "additions": 34,
+      "deletions": 26,
+      "changedFiles": 1
     },
     {
-      "number": 2030,
-      "title": "Workspace toolbar: Refresh/Close sit left over the cards, not over the Actions rail",
-      "mergedAt": "2026-08-19T21:38:47Z",
-      "additions": 6,
-      "deletions": 3,
-      "changedFiles": 2
+      "number": 2111,
+      "title": "Show order-form PO/invoice comments on their workspace cards, with @mentions",
+      "mergedAt": "2026-08-31T18:47:14Z",
+      "additions": 167,
+      "deletions": 8,
+      "changedFiles": 4
     },
     {
-      "number": 2028,
-      "title": "Rates sheet: Un-Assign PO button for Booking / Freight POs",
-      "mergedAt": "2026-08-19T21:38:30Z",
-      "additions": 569,
-      "deletions": 228,
-      "changedFiles": 7
-    },
-    {
-      "number": 2029,
-      "title": "Send BL: refresh the items table after applying BL names",
-      "mergedAt": "2026-08-19T21:38:13Z",
-      "additions": 14,
-      "deletions": 2,
-      "changedFiles": 2
-    },
-    {
-      "number": 2027,
-      "title": "Date events: source PO only, and port ERD/Cut propagates off the Booking PO",
-      "mergedAt": "2026-08-19T20:05:06Z",
+      "number": 2112,
+      "title": "Refresh workspace cards after send once the Books status write lands",
+      "mergedAt": "2026-08-31T18:46:55Z",
       "additions": 88,
-      "deletions": 10,
-      "changedFiles": 6
-    },
-    {
-      "number": 2026,
-      "title": "Quote rate submissions comment on the submitting vendor's ticket",
-      "mergedAt": "2026-08-19T18:19:56Z",
-      "additions": 112,
-      "deletions": 51,
-      "changedFiles": 3
-    },
-    {
-      "number": 2025,
-      "title": "Items sheets: pricebook rate column with mismatch alert and quick edit",
-      "mergedAt": "2026-08-19T16:57:49Z",
-      "additions": 436,
-      "deletions": 50,
-      "changedFiles": 5
-    },
-    {
-      "number": 2024,
-      "title": "Order form: void the unused invoice on Inbound orders",
-      "mergedAt": "2026-08-19T16:56:46Z",
-      "additions": 131,
-      "deletions": 0,
-      "changedFiles": 7
-    },
-    {
-      "number": 2022,
-      "title": "Items editor cleanup: actions above the table, primary Save to PO",
-      "mergedAt": "2026-08-19T16:24:00Z",
-      "additions": 50,
-      "deletions": 71,
-      "changedFiles": 2
-    },
-    {
-      "number": 2023,
-      "title": "Drop banner-shaped sender decoration from ticket image PDFs",
-      "mergedAt": "2026-08-19T16:23:36Z",
-      "additions": 22,
-      "deletions": 0,
-      "changedFiles": 1
-    },
-    {
-      "number": 2020,
-      "title": "Order form: derive Trucking By from the vendor/customer contact field",
-      "mergedAt": "2026-08-19T16:20:37Z",
-      "additions": 99,
-      "deletions": 15,
-      "changedFiles": 5
-    },
-    {
-      "number": 2019,
-      "title": "Order form: suggested qty overrides per order type",
-      "mergedAt": "2026-08-19T16:18:19Z",
-      "additions": 91,
-      "deletions": 6,
-      "changedFiles": 3
-    },
-    {
-      "number": 2018,
-      "title": "Order form Step 1: auto-load the vendor's only pricebook item",
-      "mergedAt": "2026-08-19T16:14:26Z",
-      "additions": 33,
-      "deletions": 12,
-      "changedFiles": 1
-    },
-    {
-      "number": 2021,
-      "title": "Workspace cards: More info selects the card it was clicked from",
-      "mergedAt": "2026-08-19T16:14:12Z",
-      "additions": 8,
-      "deletions": 0,
-      "changedFiles": 2
-    },
-    {
-      "number": 2017,
-      "title": "Workspace editors: name the record being edited above its table",
-      "mergedAt": "2026-08-19T15:35:31Z",
-      "additions": 60,
-      "deletions": 0,
-      "changedFiles": 3
-    },
-    {
-      "number": 2016,
-      "title": "Warehouse inbound PO mirrors supplier PO, Materials & Supplies lines only",
-      "mergedAt": "2026-08-19T15:04:56Z",
-      "additions": 116,
-      "deletions": 36,
-      "changedFiles": 5
-    },
-    {
-      "number": 2015,
-      "title": "Omit country line from freight item To address",
-      "mergedAt": "2026-08-19T14:21:45Z",
-      "additions": 3,
-      "deletions": 2,
-      "changedFiles": 2
-    },
-    {
-      "number": 2014,
-      "title": "Wrap long order status text instead of cutting it off",
-      "mergedAt": "2026-08-19T01:29:32Z",
-      "additions": 42,
-      "deletions": 55,
-      "changedFiles": 12
-    },
-    {
-      "number": 2013,
-      "title": "Persist order-form POD edits to the customer contact in Books",
-      "mergedAt": "2026-08-18T22:52:28Z",
-      "additions": 199,
-      "deletions": 29,
+      "deletions": 47,
       "changedFiles": 10
     },
     {
-      "number": 2012,
-      "title": "Tickets: cancel pending feed retries, surface load failures, throttle refresh",
-      "mergedAt": "2026-08-18T22:34:50Z",
-      "additions": 134,
-      "deletions": 18,
+      "number": 2110,
+      "title": "Clear the workspace card drop overlay when the drag ends elsewhere",
+      "mergedAt": "2026-08-31T17:05:47Z",
+      "additions": 31,
+      "deletions": 6,
+      "changedFiles": 1
+    },
+    {
+      "number": 2109,
+      "title": "Drop the \"Waiting Booking\" filter, superseded by \"Get Booking\"",
+      "mergedAt": "2026-08-31T16:03:15Z",
+      "additions": 11,
+      "deletions": 33,
       "changedFiles": 2
     },
     {
-      "number": 2011,
-      "title": "Tickets: stop empty ticket feeds from sticking as \"No threads yet\"",
-      "mergedAt": "2026-08-18T22:05:09Z",
-      "additions": 81,
+      "number": 2108,
+      "title": "Add a \"Get Booking\" filter to the Bookings page",
+      "mergedAt": "2026-08-31T15:28:19Z",
+      "additions": 23,
+      "deletions": 2,
+      "changedFiles": 2
+    },
+    {
+      "number": 2107,
+      "title": "Stop re-reading the Books organization time zone per serverless instance",
+      "mergedAt": "2026-08-31T15:11:13Z",
+      "additions": 78,
+      "deletions": 0,
+      "changedFiles": 1
+    },
+    {
+      "number": 2106,
+      "title": "Mobile: swap the header's duplicate filters icon for Search in Books",
+      "mergedAt": "2026-08-29T14:31:40Z",
+      "additions": 15,
+      "deletions": 45,
+      "changedFiles": 2
+    },
+    {
+      "number": 2105,
+      "title": "Show full BLI details before editing",
+      "mergedAt": "2026-08-29T14:31:26Z",
+      "additions": 106,
       "deletions": 15,
+      "changedFiles": 1
+    },
+    {
+      "number": 2104,
+      "title": "Stop hiding POs by order status — only Close removes a PO from the list",
+      "mergedAt": "2026-08-28T21:23:15Z",
+      "additions": 49,
+      "deletions": 184,
+      "changedFiles": 7
+    },
+    {
+      "number": 2103,
+      "title": "Keep closed records hidden while filtering the list locally",
+      "mergedAt": "2026-08-28T21:03:50Z",
+      "additions": 4,
+      "deletions": 3,
+      "changedFiles": 1
+    },
+    {
+      "number": 2100,
+      "title": "Let an explicit PO search find closed orders",
+      "mergedAt": "2026-08-28T20:49:26Z",
+      "additions": 10,
+      "deletions": 8,
+      "changedFiles": 1
+    },
+    {
+      "number": 2102,
+      "title": "Close one PO record instead of the whole root order",
+      "mergedAt": "2026-08-28T20:49:25Z",
+      "additions": 223,
+      "deletions": 171,
+      "changedFiles": 13
+    },
+    {
+      "number": 2101,
+      "title": "Keep Freight PO item quantity unchanged for LTL",
+      "mergedAt": "2026-08-28T20:28:03Z",
+      "additions": 34,
+      "deletions": 4,
+      "changedFiles": 3
+    },
+    {
+      "number": 2099,
+      "title": "Show the Books item name and SKU on invoice line rows",
+      "mergedAt": "2026-08-28T19:57:18Z",
+      "additions": 114,
+      "deletions": 1,
+      "changedFiles": 3
+    },
+    {
+      "number": 2098,
+      "title": "Make BLI item details editable",
+      "mergedAt": "2026-08-28T19:38:35Z",
+      "additions": 115,
+      "deletions": 50,
+      "changedFiles": 4
+    },
+    {
+      "number": 2097,
+      "title": "Images → PDF also folds the ticket's real PDFs into the Docs PDF",
+      "mergedAt": "2026-08-28T17:39:28Z",
+      "additions": 219,
+      "deletions": 94,
+      "changedFiles": 6
+    },
+    {
+      "number": 2095,
+      "title": "Source line descriptions from Books items, drop pricebook description",
+      "mergedAt": "2026-08-28T16:25:56Z",
+      "additions": 64,
+      "deletions": 99,
+      "changedFiles": 22
+    },
+    {
+      "number": 2094,
+      "title": "Workspace: tickets toggle leads the toolbar, rail top-aligned with the card stack",
+      "mergedAt": "2026-08-28T16:10:15Z",
+      "additions": 10,
+      "deletions": 2,
+      "changedFiles": 1
+    },
+    {
+      "number": 2096,
+      "title": "Clarify unresolved BLI item status",
+      "mergedAt": "2026-08-28T16:09:29Z",
+      "additions": 40,
+      "deletions": 7,
       "changedFiles": 2
     },
     {
-      "number": 2009,
-      "title": "Freight PO: address the To block to the selected warehouse; new Inbound invoice customer",
-      "mergedAt": "2026-08-18T20:13:36Z",
-      "additions": 61,
-      "deletions": 21,
+      "number": 2093,
+      "title": "Clarify BLI item application and container details",
+      "mergedAt": "2026-08-28T15:59:09Z",
+      "additions": 164,
+      "deletions": 172,
       "changedFiles": 4
+    },
+    {
+      "number": 2092,
+      "title": "Rename the invoice Balances button to P&amp;L",
+      "mergedAt": "2026-08-28T15:55:16Z",
+      "additions": 4,
+      "deletions": 4,
+      "changedFiles": 2
+    },
+    {
+      "number": 2091,
+      "title": "Improve BLI handling for mixed HS-code items",
+      "mergedAt": "2026-08-28T15:32:42Z",
+      "additions": 198,
+      "deletions": 63,
+      "changedFiles": 5
+    },
+    {
+      "number": 2090,
+      "title": "Workspace header: icons regrouped, rail collapse and Send BL header entry dropped",
+      "mergedAt": "2026-08-28T15:32:29Z",
+      "additions": 21,
+      "deletions": 206,
+      "changedFiles": 2
     }
   ]
 }
