@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-10-01T13:45:16.170Z",
+  "generatedAt": "2026-11-01T13:44:38.012Z",
   "repo": "rmx101/Connect",
   "totals": {
-    "commits": 8634,
-    "mergedPrs": 2171,
-    "additions": 541698,
-    "deletions": 226111,
-    "monthsActive": 12,
+    "commits": 9329,
+    "mergedPrs": 2400,
+    "additions": 571514,
+    "deletions": 245091,
+    "monthsActive": 13,
     "firstCommit": "2025-10-15T16:47:38Z",
-    "lastCommit": "2026-09-29T17:30:26Z"
+    "lastCommit": "2026-10-31T19:32:48Z"
   },
   "byMonth": [
     {
@@ -94,208 +94,215 @@
       "mergedPrs": 147,
       "additions": 23169,
       "deletions": 8499
+    },
+    {
+      "month": "2026-10",
+      "commits": 695,
+      "mergedPrs": 229,
+      "additions": 29816,
+      "deletions": 18980
     }
   ],
   "recentMergedPrs": [
     {
-      "number": 2264,
-      "title": "BK Form: Booking PDF upload via shared uploader; surface upload failures",
-      "mergedAt": "2026-09-29T17:30:27Z",
-      "additions": 49,
-      "deletions": 26,
-      "changedFiles": 2
-    },
-    {
-      "number": 2263,
-      "title": "Workspace: \"Check Item QTY vs Load qty\" alert on -PO and invoice cards",
-      "mergedAt": "2026-09-29T17:16:30Z",
-      "additions": 185,
-      "deletions": 11,
-      "changedFiles": 6
-    },
-    {
-      "number": 2262,
-      "title": "Workspace Refresh: re-read active card details from Books so Books-side item/rate edits show up",
-      "mergedAt": "2026-09-27T19:57:15Z",
-      "additions": 35,
-      "deletions": 8,
-      "changedFiles": 5
-    },
-    {
-      "number": 2261,
-      "title": "Order form step 3: declutter PO rows (short desc preview, alerts under title, Actions button)",
-      "mergedAt": "2026-09-27T19:33:26Z",
-      "additions": 17,
-      "deletions": 17,
-      "changedFiles": 4
-    },
-    {
-      "number": 2260,
-      "title": "Order form step 3: compact PO rows (badge · vendor · total · Confirm · actions menu)",
-      "mergedAt": "2026-09-27T16:30:16Z",
-      "additions": 502,
-      "deletions": 543,
-      "changedFiles": 7
-    },
-    {
-      "number": 2259,
-      "title": "Warehouse PO items: auto-format pasted inbound rows; carry inbound #s to invoice as \"Lot #\"",
-      "mergedAt": "2026-09-27T16:29:47Z",
-      "additions": 298,
-      "deletions": 13,
-      "changedFiles": 8
-    },
-    {
-      "number": 2258,
-      "title": "Order form items: description under item name, click-to-edit, no more table squash",
-      "mergedAt": "2026-09-27T16:17:59Z",
-      "additions": 101,
-      "deletions": 57,
-      "changedFiles": 1
-    },
-    {
-      "number": 2257,
-      "title": "ERD Cut email: open a Load Appt ticket on the supplier -PO when none exists",
-      "mergedAt": "2026-09-27T15:26:06Z",
-      "additions": 86,
-      "deletions": 38,
-      "changedFiles": 7
-    },
-    {
-      "number": 2256,
-      "title": "ERD Cut email: supplier -PO 24h gate, 48h notify window with deferred queueing",
-      "mergedAt": "2026-09-27T01:27:36Z",
-      "additions": 302,
-      "deletions": 49,
-      "changedFiles": 3
-    },
-    {
-      "number": 2255,
-      "title": "Order form history: remember Hold/Process switch per vendor+customer combo",
-      "mergedAt": "2026-09-26T23:49:49Z",
-      "additions": 53,
-      "deletions": 5,
-      "changedFiles": 4
-    },
-    {
-      "number": 2254,
-      "title": "Migration: drop user_notifications event_type check (only allowed 'mention')",
-      "mergedAt": "2026-09-26T20:39:35Z",
+      "number": 2495,
+      "title": "Actions sheet: Release BL shows done once the release request is sent",
+      "mergedAt": "2026-10-31T19:32:49Z",
       "additions": 3,
-      "deletions": 0,
-      "changedFiles": 1
-    },
-    {
-      "number": 2253,
-      "title": "Attachment guard: -Booking/-Freight exemption no longer depends on client-sent PO number",
-      "mergedAt": "2026-09-26T20:25:01Z",
-      "additions": 31,
-      "deletions": 10,
-      "changedFiles": 3
-    },
-    {
-      "number": 2251,
-      "title": "Cost approvals: bell notifications instead of email queue; skip guard on placeholder-rate POs",
-      "mergedAt": "2026-09-26T20:18:46Z",
-      "additions": 141,
-      "deletions": 187,
-      "changedFiles": 7
-    },
-    {
-      "number": 2250,
-      "title": "Cost hold: raise Freight/Booking increase threshold to 7%",
-      "mergedAt": "2026-09-26T20:18:36Z",
-      "additions": 10,
-      "deletions": 10,
-      "changedFiles": 3
-    },
-    {
-      "number": 2252,
-      "title": "BK form: show container qty mismatch under Ship By",
-      "mergedAt": "2026-09-26T20:18:14Z",
-      "additions": 6,
-      "deletions": 9,
-      "changedFiles": 1
-    },
-    {
-      "number": 2249,
-      "title": "Cost approval emails: review fixes from #2247",
-      "mergedAt": "2026-09-26T19:56:12Z",
-      "additions": 21,
-      "deletions": 10,
-      "changedFiles": 3
-    },
-    {
-      "number": 2248,
-      "title": "PO workspace: show P&L button on invoice cards for admin/manager",
-      "mergedAt": "2026-09-26T19:52:59Z",
-      "additions": 1,
-      "deletions": 9,
-      "changedFiles": 3
-    },
-    {
-      "number": 2247,
-      "title": "Cost approvals: email queue nudge to managers on hold, decision email back to requester",
-      "mergedAt": "2026-09-26T19:39:56Z",
-      "additions": 194,
-      "deletions": 6,
-      "changedFiles": 4
-    },
-    {
-      "number": 2246,
-      "title": "Order form Step 2: mobile-portrait layout for terms checklist",
-      "mergedAt": "2026-09-25T22:25:03Z",
-      "additions": 24,
-      "deletions": 21,
-      "changedFiles": 2
-    },
-    {
-      "number": 2244,
-      "title": "Order form Step 2: keep customer details collapsed for flagged notes",
-      "mergedAt": "2026-09-25T22:24:54Z",
-      "additions": 1,
-      "deletions": 4,
-      "changedFiles": 1
-    },
-    {
-      "number": 2245,
-      "title": "Order form Step 2: stacked terms checklist + one-line item rows with details toggle",
-      "mergedAt": "2026-09-25T22:12:07Z",
-      "additions": 358,
-      "deletions": 403,
-      "changedFiles": 2
-    },
-    {
-      "number": 2243,
-      "title": "Order form Step 2: compact confirmed terms and collapse customer details",
-      "mergedAt": "2026-09-25T21:08:40Z",
-      "additions": 139,
-      "deletions": 18,
-      "changedFiles": 3
-    },
-    {
-      "number": 2241,
-      "title": "Order form Step 1: cap PO reference input width at 50ch",
-      "mergedAt": "2026-09-25T21:06:21Z",
-      "additions": 1,
       "deletions": 1,
       "changedFiles": 1
     },
     {
-      "number": 2242,
-      "title": "BLI form: show invoice POD next to BK #",
-      "mergedAt": "2026-09-25T20:57:10Z",
-      "additions": 22,
-      "deletions": 3,
+      "number": 2493,
+      "title": "Home: POs Home uses 2 columns (like Invoices)",
+      "mergedAt": "2026-10-30T22:48:22Z",
+      "additions": 12,
+      "deletions": 6,
       "changedFiles": 2
     },
     {
-      "number": 2240,
-      "title": "Order form Step 2: remove the table-level \"Apply BL Names\" button",
-      "mergedAt": "2026-09-25T20:47:45Z",
-      "additions": 0,
-      "deletions": 42,
+      "number": 2494,
+      "title": "Home: Tickets tab for everyone, switch in the header, ticket cards moved off Checklist",
+      "mergedAt": "2026-10-30T22:46:53Z",
+      "additions": 45,
+      "deletions": 155,
+      "changedFiles": 8
+    },
+    {
+      "number": 2492,
+      "title": "Invoice tracker: remove per-row buttons and Needs OK rows",
+      "mergedAt": "2026-10-30T22:22:38Z",
+      "additions": 12,
+      "deletions": 91,
+      "changedFiles": 1
+    },
+    {
+      "number": 2491,
+      "title": "Invoice tracker: per-row action buttons (reminder, Exp pmt, OK to release)",
+      "mergedAt": "2026-10-30T21:26:21Z",
+      "additions": 74,
+      "deletions": 3,
+      "changedFiles": 1
+    },
+    {
+      "number": 2490,
+      "title": "Email queue: Approve reverts to inline Review & Send sheet",
+      "mergedAt": "2026-10-30T21:26:02Z",
+      "additions": 98,
+      "deletions": 45,
+      "changedFiles": 4
+    },
+    {
+      "number": 2489,
+      "title": "Remove New Email action; add \"Create new ticket\" checkbox on send step",
+      "mergedAt": "2026-10-30T21:13:37Z",
+      "additions": 103,
+      "deletions": 137,
+      "changedFiles": 24
+    },
+    {
+      "number": 2488,
+      "title": "BL Pipeline: 2 queues (BLI/Drafts + SWB Releases), FOB shortcut, 24h done rows",
+      "mergedAt": "2026-10-30T20:38:33Z",
+      "additions": 274,
+      "deletions": 204,
+      "changedFiles": 10
+    },
+    {
+      "number": 2487,
+      "title": "Email compose: list \"PO PDF\"/\"Invoice PDF\" as first attachment choice",
+      "mergedAt": "2026-10-30T20:28:18Z",
+      "additions": 130,
+      "deletions": 17,
+      "changedFiles": 4
+    },
+    {
+      "number": 2486,
+      "title": "BK form: no date fields in PO Notes; write each date to its PO field",
+      "mergedAt": "2026-10-30T20:27:40Z",
+      "additions": 212,
+      "deletions": 224,
+      "changedFiles": 7
+    },
+    {
+      "number": 2485,
+      "title": "Home Calendar: weekdays only (Fri shows next Monday, not Saturday)",
+      "mergedAt": "2026-10-30T20:08:40Z",
+      "additions": 21,
+      "deletions": 10,
       "changedFiles": 2
+    },
+    {
+      "number": 2484,
+      "title": "ERD/Cut parse: stamp route card dates + note on -Booking card",
+      "mergedAt": "2026-10-30T17:43:13Z",
+      "additions": 152,
+      "deletions": 17,
+      "changedFiles": 10
+    },
+    {
+      "number": 2483,
+      "title": "BL Pipeline: preview and one-click attach for the received SWB file",
+      "mergedAt": "2026-10-30T16:28:52Z",
+      "additions": 144,
+      "deletions": 28,
+      "changedFiles": 3
+    },
+    {
+      "number": 2481,
+      "title": "Home: Checklist | Tickets tab (My tickets, Today's replies, Tagged today)",
+      "mergedAt": "2026-10-30T16:28:11Z",
+      "additions": 500,
+      "deletions": 43,
+      "changedFiles": 11
+    },
+    {
+      "number": 2482,
+      "title": "OK to release lets operators run the full SWB flow on unpaid invoices",
+      "mergedAt": "2026-10-30T16:09:44Z",
+      "additions": 95,
+      "deletions": 9,
+      "changedFiles": 8
+    },
+    {
+      "number": 2480,
+      "title": "Add \"New Email\" card action (blank compose + attachment picker)",
+      "mergedAt": "2026-10-30T15:28:14Z",
+      "additions": 123,
+      "deletions": 18,
+      "changedFiles": 16
+    },
+    {
+      "number": 2479,
+      "title": "Invoice tracker: title opens filter menu; drop Home link and tab bar",
+      "mergedAt": "2026-10-30T15:16:44Z",
+      "additions": 68,
+      "deletions": 58,
+      "changedFiles": 1
+    },
+    {
+      "number": 2478,
+      "title": "Home: count card-row clicks; Admin → Card usage list",
+      "mergedAt": "2026-10-30T14:21:18Z",
+      "additions": 168,
+      "deletions": 4,
+      "changedFiles": 6
+    },
+    {
+      "number": 2477,
+      "title": "Home cleanup: drop old tile picker, unused counts and click logging",
+      "mergedAt": "2026-10-30T13:24:24Z",
+      "additions": 25,
+      "deletions": 301,
+      "changedFiles": 8
+    },
+    {
+      "number": 2475,
+      "title": "Home Shipping: Send Ship notice first, highlighted",
+      "mergedAt": "2026-10-30T12:23:50Z",
+      "additions": 6,
+      "deletions": 4,
+      "changedFiles": 3
+    },
+    {
+      "number": 2476,
+      "title": "Revert shared Home keyword filters (back to per-user)",
+      "mergedAt": "2026-10-30T12:23:24Z",
+      "additions": 29,
+      "deletions": 56,
+      "changedFiles": 4
+    },
+    {
+      "number": 2469,
+      "title": "Home: My filters as mini count boxes",
+      "mergedAt": "2026-10-30T00:48:51Z",
+      "additions": 33,
+      "deletions": 26,
+      "changedFiles": 1
+    },
+    {
+      "number": 2470,
+      "title": "Home: Calendar card shows Today + Tomorrow, week as small boxes",
+      "mergedAt": "2026-10-30T00:48:15Z",
+      "additions": 63,
+      "deletions": 47,
+      "changedFiles": 3
+    },
+    {
+      "number": 2473,
+      "title": "Remove unused leftover PO filters (Cutoffs This Week, Waiting / Hold, Timeline tile)",
+      "mergedAt": "2026-10-30T00:47:25Z",
+      "additions": 2,
+      "deletions": 76,
+      "changedFiles": 4
+    },
+    {
+      "number": 2472,
+      "title": "Invoices: ETA Soon counts only unpaid invoices",
+      "mergedAt": "2026-10-30T00:46:43Z",
+      "additions": 12,
+      "deletions": 8,
+      "changedFiles": 4
     }
   ]
 }
